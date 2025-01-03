@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp/widgets/callsWidget.dart';
 import 'package:whatsapp/widgets/chatsWidget.dart';
+import 'package:whatsapp/widgets/statusWidget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -132,7 +134,7 @@ class HomePage extends StatelessWidget {
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(20)),
                           child: Text(
-                            "12",
+                            "10",
                             style: TextStyle(
                                 color: Color(0xff075e55), fontSize: 13),
                           ),
@@ -163,25 +165,21 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            Flexible( flex: 1,
+            Flexible(
+                flex: 1,
                 child: TabBarView(children: [
-              // tab 1
-              Container(
-                color: Colors.black,
-              ),
+                  // tab 1
+                  Container(
+                    color: Colors.black,
+                  ),
 
-             
-              //tab 2
-               ChatsWidget(),
-                //tab 3
-              Container(
-                color: Colors.blue,
-              ),
-                //tab 4
-              Container(
-                color: Colors.orange,
-              ),
-            ]))
+                  //tab 2
+                  ChatsWidget(),
+                  //tab 3
+                  StatusWidget(),
+                  //tab 4
+                  CallsWidget(),
+                ]))
           ],
         ),
       ),
