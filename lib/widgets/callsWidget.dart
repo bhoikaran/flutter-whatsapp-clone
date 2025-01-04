@@ -31,7 +31,7 @@ class CallsWidget extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Coder",
+                            "User $i",
                             style: TextStyle(
                                 fontSize: 18, fontWeight: FontWeight.bold),
                           ),
@@ -87,7 +87,7 @@ class CallsWidget extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Programmer",
+                            "User $i",
                             style: TextStyle(
                                 fontSize: 18, fontWeight: FontWeight.bold),
                           ),

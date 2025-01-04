@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp/homePage.dart';
+import 'package:whatsapp/widgets/chatPage.dart';
+import 'package:whatsapp/widgets/settingsPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +19,11 @@ class MyApp extends StatelessWidget {
           appBarTheme: AppBarTheme(color: Color(0xff075e55)),
           bottomSheetTheme: BottomSheetThemeData(
               backgroundColor: Colors.black.withOpacity(0))),
-      routes: {"/": (context) => HomePage()},
+      routes: {
+        "/": (context) => HomePage(),
+        "settingsPage":(context)=> SettingsPage(),
+        "chatPage":(context)=> ChatPage(),
+      },
     );
   }
 }
