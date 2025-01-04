@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:whatsapp/widgets/chatBottomBar.dart';
 import 'package:whatsapp/widgets/chatSample.dart';
 
 class ChatPage extends StatelessWidget {
@@ -137,6 +138,7 @@ class ChatPage extends StatelessWidget {
           ),
         ),
       ),
+      bottomSheet: ChatBottombar(),
     );
   }
 }
