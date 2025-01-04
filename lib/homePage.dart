@@ -36,6 +36,11 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 PopupMenuButton(
+                  onSelected: (result) {
+                    if (result == 6) {
+                      Navigator.pushNamed(context, "settingsPage");
+                    }
+                  },
                   iconColor: Colors.white,
                   color: Colors.white,
                   iconSize: 28,
