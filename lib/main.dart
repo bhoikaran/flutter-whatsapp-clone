@@ -1,29 +1,27 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:whatsapp/homePage.dart';
-import 'package:whatsapp/widgets/chatPage.dart';
-import 'package:whatsapp/widgets/settingsPage.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:whatsapp/app.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MaterialApp(
+    title: "Spotify",
+    debugShowCheckedModeBanner: false,
+    home: SplashScreen(),
+  ));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-          scaffoldBackgroundColor: Colors.white,
-          appBarTheme: AppBarTheme(color: Color(0xff075e55)),
-          bottomSheetTheme: BottomSheetThemeData(
-              backgroundColor: Colors.black.withOpacity(0))),
-      routes: {
-        "/": (context) => HomePage(),
-        "settingsPage":(context)=> SettingsPage(),
-        "chatPage":(context)=> ChatPage(),
-      },
-    );
+    return AnimatedSplashScreen(
+        splash: Container(
+          child: Image.asset('assets/logo.png'),
+        ),
+        backgroundColor: Colors.black,
+        duration: 1200,
+        splashIconSize: 180,
+        pageTransitionType: PageTransitionType.bottomToTop,
+        nextScreen: MyApp());
   }
 }

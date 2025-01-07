@@ -35,6 +35,10 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   custom_clippers: ^2.0.0
+  animated_splash_screen: ^1.3.0
+  page_transition: ^2.2.1
+
+
 
 dev_dependencies:
   flutter_test:
@@ -71,6 +75,7 @@ flutter:
       - assets/profile_9.jpg
       - assets/profile_10.jpg
       - assets/whatsapp_chat_background.png
+      - assets/logo.png
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
