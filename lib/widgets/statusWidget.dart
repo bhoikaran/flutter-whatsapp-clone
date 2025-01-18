@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp/widgets/storyView.dart';
 
 class StatusWidget extends StatelessWidget {
   const StatusWidget({super.key});
@@ -83,21 +84,24 @@ class StatusWidget extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    Container(
-                      padding: EdgeInsets.all(1.5),
-                      decoration: BoxDecoration(
+                    GestureDetector(
+                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => StoryPageView(),)),
+                      child: Container(
+                        padding: EdgeInsets.all(1.5),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(40),
+                            border: Border.all(
+                              color: Colors.green,
+                              width: 3,
+                            )),
+                        child: ClipRRect(
                           borderRadius: BorderRadius.circular(40),
-                          border: Border.all(
-                            color: Colors.green,
-                            width: 3,
-                          )),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(40),
-                        child: Image.asset(
-                          "assets/profile_$i.jpg",
-                          height: 55,
-                          width: 55,
-                          fit: BoxFit.cover,
+                          child: Image.asset(
+                            "assets/profile_$i.jpg",
+                            height: 55,
+                            width: 55,
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     ),

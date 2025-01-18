@@ -16,11 +16,38 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedSplashScreen(
         splash: Container(
-          child: Image.asset('assets/logo.png'),
+          height: double.infinity,
+          width: double.infinity,
+          child: Column(
+            children: [
+              SizedBox(height: 100,),
+              Image.asset(
+                'assets/logo.png',
+                width: 100,
+                height: 150,
+              ),
+                 SizedBox(height: 200,),
+              Text(
+                "From",
+                style: TextStyle(
+                    fontSize: 15,
+                    color: Colors.black.withOpacity(0.7),
+                    letterSpacing: 2),
+              ),
+                 SizedBox(height: 12,),
+              Text(
+                "Meta",
+                style: TextStyle(
+                    fontSize: 25,
+                    color: Colors.black.withOpacity(0.7),
+                    letterSpacing: 3),
+              )
+            ],
+          ),
         ),
-        backgroundColor: Colors.black,
-        duration: 1200,
-        splashIconSize: 180,
+        backgroundColor: Colors.white,
+        duration: 10000,
+        splashIconSize: 600,
         pageTransitionType: PageTransitionType.bottomToTop,
         nextScreen: MyApp());
   }
